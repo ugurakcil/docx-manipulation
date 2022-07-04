@@ -1,4 +1,15 @@
 <?php
+/**
+ *
+ * @package      DocxManipulation
+ * @since        1.0.0
+ * @link         https://github.com/ugurakcil/docx-manipulation
+ * @author       Uğur AKÇIL <ugurakcil@gmail.com>
+ * @copyright    Copyright (c) 2022, Uğur AKÇIL
+ * @license      https://github.com/ugurakcil/docx-manipulation/blob/master/LICENSE MIT License
+ *
+ */
+
 namespace App;
 
 use DOMDocument;
@@ -56,7 +67,7 @@ class Docx2Html
     public function applyTemplate($filePath, $docxTextFull)
     {
         $this->phpWord = new \PhpOffice\PhpWord\PhpWord();
-        
+
         $docxParagraphList = explode("\n", $docxTextFull);
 
         $docxParagraphList = array_values(array_filter($docxParagraphList));
